@@ -1,0 +1,7 @@
+version: '3'
+services:
+  printf:
+    build:
+      context: .
+    ports:
+      - "10003:5000"

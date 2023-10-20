@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+  lfi:
+    build:
+      context: .
+      dockerfile: Dockerfile_lfi
+    restart: unless-stopped
+    networks:
+      - lfi-network
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile_nginx
+    restart: unless-stopped
+    ports:
+      - "10762:80"
+    networks:
+      - lfi-network
+
+networks:
+  lfi-network:
+    driver: bridge

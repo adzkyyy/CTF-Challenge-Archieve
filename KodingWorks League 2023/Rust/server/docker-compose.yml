@@ -1,0 +1,7 @@
+version: '3'
+services:
+  buffow:
+    build:
+      context: .
+    ports:
+      - "10197:5000"

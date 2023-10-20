@@ -1,0 +1,1 @@
+KWCTF{ngapain_pusing??_itu_cuma_printf}
